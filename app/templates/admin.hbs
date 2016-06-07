@@ -1,1 +1,9 @@
 {{add-article save="saveArticle"}}
+
+<ul>
+  {{#each model as |article|}}
+    <li>{{#link-to 'full-article' article.id}}<img src={{article.image}}>{{/link-to}}<h5>{{article.title}}</h5> by: {{article.author}}</li>
+    <button {{action 'delete' article}}>Delete</button>
+    {{update-article article=article update='update'}}
+  {{/each}}
+</ul>
