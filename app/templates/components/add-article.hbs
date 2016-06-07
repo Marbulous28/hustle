@@ -1,0 +1,33 @@
+<h4>Add New Article</h4>
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=title id="title"}}
+  </div>
+
+  <div class="form-group">
+    <label for="author">Author</label>
+    {{input value=author id="author"}}
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    {{#x-select value=category}}
+      {{#x-option value="news"}}News{{/x-option}}
+      {{#x-option value="entertainment"}}Entertainment{{/x-option}}
+      {{#x-option value="sports"}}Sports{{/x-option}}
+    {{/x-select}}
+  </div>
+
+  <div class="form-group">
+    <label for="text">Text</label>
+    {{input value=text cols='10' rows='6'}}
+  </div>
+
+  <div class="form-group">
+    <label for="image">Image</label>
+    {{input value=image id="image"}}
+  </div>
+
+  <button {{action 'save'}}>Save</button>
+</form>

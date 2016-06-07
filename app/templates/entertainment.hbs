@@ -1,0 +1,7 @@
+<ul>
+  {{#each model as |article|}}
+  {{#if (eq article.category "entertainment")}}
+    <li>{{#link-to 'full-article' article.id}}{{article.title}}{{/link-to}} by: {{article.author}}</li>
+  {{/if}}
+  {{/each}}
+</ul>

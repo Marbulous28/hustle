@@ -1,0 +1,7 @@
+<h1>Welcome to Hustle</h1>
+
+<ul>
+  {{#each model as |article|}}
+    <li>{{#link-to 'full-article' article.id}}<img src={{article.image}}>{{/link-to}}<h5>{{article.title}}</h5> by: {{article.author}}</li>
+  {{/each}}
+</ul>
